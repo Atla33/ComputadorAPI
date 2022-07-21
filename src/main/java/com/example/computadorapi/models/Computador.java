@@ -5,12 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-
+import javax.persistence.*;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,6 +23,11 @@ public class Computador {
     String preco;
     String descricao;
 
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @JoinColumn(name = "etiqueta_serial")
+    Etiqueta etiqueta;
 
+    @OneToMany(mappedBy = "computador", fetch = FetchType.LAZY)
+    private Set<Peças> peças;
 
 }

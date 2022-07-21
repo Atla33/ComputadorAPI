@@ -5,16 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Peças {
+public class Peças  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +21,10 @@ public class Peças {
     String memoria;
     String Placa_de_Vídeo;
     String Processador;
+
+    @ManyToOne
+    @JoinColumn(name = "computador_id")
+    private Computador computador;
 
 
 }
