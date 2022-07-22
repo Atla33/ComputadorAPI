@@ -47,7 +47,7 @@ public class ComputadorController {
         }
 
         @PostMapping
-        public ResponseEntity<Computador> insert(@RequestBody ComputadorRequestDTO c) throws URISyntaxException {
+        public ResponseEntity<Computador> insert(@RequestBody Computador c) throws URISyntaxException {
 
 
             Computador novo = modelMapper.map(c, Computador.class);

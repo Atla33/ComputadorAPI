@@ -3,6 +3,7 @@ package com.example.computadorapi.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.hateoas.RepresentationModel;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +15,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Data
 @Entity
-public class Etiqueta {
+public class Etiqueta extends RepresentationModel<Etiqueta> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

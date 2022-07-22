@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -17,14 +18,9 @@ public class Peças  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    String placa_mae;
+    String placaMae;
     String memoria;
-    String Placa_de_Vídeo;
-    String Processador;
-
-    @ManyToOne
-    @JoinColumn(name = "computador_id")
-    private Computador computador;
-
+    String placaVídeo;
+    String processador;
 
 }

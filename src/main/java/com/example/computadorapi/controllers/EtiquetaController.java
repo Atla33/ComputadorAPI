@@ -1,13 +1,9 @@
 package com.example.computadorapi.controllers;
 
-import com.example.computadorapi.dtos.computador.ComputadorRequestDTO;
-import com.example.computadorapi.dtos.computador.ComputadorResponseDTO;
+
 import com.example.computadorapi.dtos.etiqueta.EtiquetaRequestDTO;
 import com.example.computadorapi.dtos.etiqueta.EtiquetaResponseDTO;
-import com.example.computadorapi.models.Computador;
 import com.example.computadorapi.models.Etiqueta;
-import com.example.computadorapi.models.Peças;
-import com.example.computadorapi.services.ComputadorService;
 import com.example.computadorapi.services.EtiquetaService;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.ResponseEntity;

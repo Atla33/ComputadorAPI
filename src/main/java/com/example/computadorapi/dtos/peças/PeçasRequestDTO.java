@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PeçasRequestDTO {
-    String placa_mae;
+    String placaMae;
     String memoria;
+    String placaVídeo;
+    String processador;
 }

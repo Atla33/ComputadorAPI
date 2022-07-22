@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class EtiquetaRequestDTO {
+    Long design_code;
     Long mfr_code;
     String fabricante;
+
 }

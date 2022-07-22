@@ -12,10 +12,10 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 @NoArgsConstructor
 public class PeçasResponseDTO extends RepresentationModel<PeçasResponseDTO> {
 
-    String placa_mae;
+    String placaMae;
     String memoria;
-    String Placa_de_Vídeo;
-    String Processador;
+    String placaVídeo;
+    String processador;
 
     public void addHateoasLinks(Long serial ){
         this.add(linkTo(EtiquetaController.class).slash(serial).withSelfRel());

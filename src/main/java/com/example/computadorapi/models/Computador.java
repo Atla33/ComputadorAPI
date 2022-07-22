@@ -23,11 +23,11 @@ public class Computador {
     String preco;
     String descricao;
 
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToOne(cascade = {CascadeType.MERGE})
     @JoinColumn(name = "etiqueta_serial")
     Etiqueta etiqueta;
 
-    @OneToMany(mappedBy = "computador", fetch = FetchType.LAZY)
-    private Set<Peças> peças;
-
+    @ManyToOne(cascade = {CascadeType.PERSIST})
+    @JoinColumn(name = "peças_id")
+    Peças peças;
 }

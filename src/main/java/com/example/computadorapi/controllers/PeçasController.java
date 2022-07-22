@@ -1,13 +1,11 @@
 package com.example.computadorapi.controllers;
 
 
-import com.example.computadorapi.dtos.computador.ComputadorRequestDTO;
-import com.example.computadorapi.dtos.computador.ComputadorResponseDTO;
+
 import com.example.computadorapi.dtos.peças.PeçasRequestDTO;
 import com.example.computadorapi.dtos.peças.PeçasResponseDTO;
 import com.example.computadorapi.models.Computador;
 import com.example.computadorapi.models.Peças;
-import com.example.computadorapi.services.ComputadorService;
 import com.example.computadorapi.services.PeçasService;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.ResponseEntity;
