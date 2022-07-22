@@ -27,7 +27,7 @@ public class Computador {
     @JoinColumn(name = "etiqueta_serial")
     Etiqueta etiqueta;
 
-    @ManyToOne(cascade = {CascadeType.PERSIST})
+    @ManyToOne(cascade = {CascadeType.MERGE})
     @JoinColumn(name = "peças_id")
     Peças peças;
 }
